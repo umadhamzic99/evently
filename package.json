@@ -1,0 +1,31 @@
+{
+  "name": "evently",
+  "version": "1.0.0",
+  "description": "Enterprise L&D Event Management System - Phase 1 Engine",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test dist/tests/*.test.js",
+    "test:ts": "tsc && node --test dist/tests/*.test.js",
+    "build:gas": "tsc -p tsconfig.gas.json --noEmit && node scripts/bundle-gas.js",
+    "clasp:login": "clasp login",
+    "clasp:create": "clasp create --title Evently --type webapp --rootDir dist/gas",
+    "clasp:push": "npm run build:gas && clasp push"
+  },
+  "keywords": [
+    "event-management",
+    "learning-and-development",
+    "apps-script",
+    "bigquery"
+  ],
+  "author": "Evently Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@google/clasp": "^3.4.1",
+    "@types/google-apps-script": "^2.0.13",
+    "@types/node": "^24.19.2",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3"
+  }
+}

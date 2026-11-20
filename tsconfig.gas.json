@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2019"],
+    "outDir": "./dist-gas-check",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["google-apps-script"]
+  },
+  "include": ["src/gas/**/*", "src/types/**/*", "src/core/rbac-guard.ts", "src/core/event-registry.ts"],
+  "exclude": ["src/core/qr-security.ts", "src/core/waitlist-engine.ts"]
+}
